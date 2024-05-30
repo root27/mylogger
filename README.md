@@ -23,10 +23,12 @@ import (
 )
 
 func main() {
-    logger := mylogger.New("app.log", "MYAPP", mylogger.DEBUG)
-    if logger == nil {
-        log.Fatalf("could not create logger")
-    }
+    logger, err := mylogger.New("app.log", "MYAPP", mylogger.DEBUG)
+    
+    if err != nil {
+		log.Fatalf("could not create logger")
+	}
+
     defer logger.Close()
 
     logger.Debug("This is a debug message")
@@ -37,3 +39,20 @@ func main() {
 }
 
 ```
+
+
+## Test Results
+
+```bash
+
+[2024-05-30T13:10:32+03:00] myapp [DEBUG] This is a debug message
+[2024-05-30T13:10:32+03:00] myapp [INFO] This is an info message
+[2024-05-30T13:10:32+03:00] myapp [WARN] This is a warning message
+[2024-05-30T13:10:32+03:00] myapp [ERROR] This is an error message
+[2024-05-30T13:10:32+03:00] myapp [FATAL] This is a fatal message
+
+```
+
+
+
+
