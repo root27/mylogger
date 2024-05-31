@@ -86,12 +86,6 @@ func main() {
 [2024-05-30T13:10:32+03:00] myapp [FATAL] This is a fatal message
 
 ```
-- Color Results
-
-## <span style="color:Green">[2024-05-31T17:12:13+03:00] myapp [INFO] this is colorful info</span><br>
-## <span style="color:Red">[2024-05-31T17:12:13+03:00] myapp [ERROR] this is colorful error</span><br>
-## <span style="color:Yellow">[2024-05-31T17:12:13+03:00] myapp [WARN] this is colorful warning</span>
-
 ---
 
 ## Features
