@@ -58,7 +58,7 @@ func main() {
 
 ## Todo's
 
-[ ] - Add colors
+- [ ] Add colors
 
 
 
