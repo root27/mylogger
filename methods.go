@@ -29,3 +29,15 @@ func (l *Logger) Close() error {
 	}
 	return nil
 }
+
+func (l *Logger) InfoWithColor(msg string) {
+	l.logWithColor(INFO, msg)
+}
+
+func (l *Logger) WarnWithColor(msg string) {
+	l.logWithColor(WARN, msg)
+}
+
+func (l *Logger) ErrorWithColor(msg string) {
+	l.logWithColor(ERROR, msg)
+}

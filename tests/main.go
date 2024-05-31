@@ -18,6 +18,9 @@ func main() {
 	logger.Info("This is an info message")
 	logger.Warn("This is a warning message")
 	logger.Error("This is an error message")
-	logger.Fatal("This is a fatal message")
+
+	logger.InfoWithColor("this is colorful info")
+	logger.WarnWithColor("this is colorful warning")
+	logger.ErrorWithColor("this is colorful error")
 
 }

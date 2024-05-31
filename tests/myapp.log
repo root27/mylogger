@@ -1,5 +1,7 @@
-[2024-05-30T13:10:32+03:00] myapp [DEBUG] This is a debug message
-[2024-05-30T13:10:32+03:00] myapp [INFO] This is an info message
-[2024-05-30T13:10:32+03:00] myapp [WARN] This is a warning message
-[2024-05-30T13:10:32+03:00] myapp [ERROR] This is an error message
-[2024-05-30T13:10:32+03:00] myapp [FATAL] This is a fatal message
+[2024-05-31T17:12:13+03:00] myapp [DEBUG] This is a debug message
+[2024-05-31T17:12:13+03:00] myapp [INFO] This is an info message
+[2024-05-31T17:12:13+03:00] myapp [WARN] This is a warning message
+[2024-05-31T17:12:13+03:00] myapp [ERROR] This is an error message
+[32m[2024-05-31T17:12:13+03:00] myapp [INFO] this is colorful info
+[33m[2024-05-31T17:12:13+03:00] myapp [WARN] this is colorful warning
+[31m[2024-05-31T17:12:13+03:00] myapp [ERROR] this is colorful error

@@ -14,6 +14,8 @@ go get github.com/root27/mylogger
 
 ## Usage
 
+- Without Colors
+
 ```go
 
 package main
@@ -41,6 +43,36 @@ func main() {
 
 ```
 
+- With Colors
+
+```go
+
+package main
+
+
+import (
+    "github.com/root27/mylogger"
+    "log"
+)
+
+func main() {
+    logger, err := mylogger.New("app.log", "MYAPP", mylogger.DEBUG)
+    
+    if err != nil {
+		log.Fatalf("could not create logger")
+	}
+
+    defer logger.Close()
+    
+    logger.InfoWithColor("this is colorful info")
+    logger.WarnWithColor("this is colorful warning")
+    logger.ErrorWithColor("this is colorful error")
+
+}
+
+```
+
+
 ---
 
 ## Test Results
@@ -54,13 +86,22 @@ func main() {
 [2024-05-30T13:10:32+03:00] myapp [FATAL] This is a fatal message
 
 ```
+
 ---
 
-## Todo's
+## Features
 
-- [ ] Add colors
+- Colorful Info, Warning and Error messages
 
+- Colors for corresponding message shown below;
 
+```bash
+
+INFO: Green 
+WARNING: Yellow
+ERROR: Red
+
+```
 
 
 

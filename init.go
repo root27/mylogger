@@ -33,6 +33,30 @@ func New(filePath, prefix string, level LogLevel) (*Logger, error) {
 	return &Logger{out: file, prefix: prefix, level: level}, nil
 }
 
+func (l *Logger) logWithColor(level LogLevel, msg string) {
+
+	if level < l.level {
+		return
+	}
+
+	fgColor := FGWHITE
+
+	switch level.String() {
+	case "INFO":
+		fgColor = FGGREEN
+	case "WARN":
+		fgColor = FGYELLOW
+	case "ERROR":
+		fgColor = FGRED
+
+	}
+
+	l.mu.Lock()
+	defer l.mu.Unlock()
+	timestamp := time.Now().Format(time.RFC3339)
+	fmt.Fprintf(l.out, "%s[%s] %s [%s] %s\n", fgColor, timestamp, l.prefix, level.String(), msg)
+
+}
 func (l *Logger) log(level LogLevel, msg string) {
 	if level < l.level {
 		return
@@ -46,4 +70,3 @@ func (l *Logger) log(level LogLevel, msg string) {
 func (level LogLevel) String() string {
 	return [...]string{"DEBUG", "INFO", "WARN", "ERROR", "FATAL"}[level]
 }
-
