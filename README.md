@@ -10,6 +10,7 @@ This is customized logging package in Golang. It can be used to log errors, info
 go get github.com/root27/mylogger
 
 ```
+---
 
 ## Usage
 
@@ -40,6 +41,7 @@ func main() {
 
 ```
 
+---
 
 ## Test Results
 
@@ -52,6 +54,12 @@ func main() {
 [2024-05-30T13:10:32+03:00] myapp [FATAL] This is a fatal message
 
 ```
+---
+
+## Todo's
+
+[ ] - Add colors
+
 
 
 
